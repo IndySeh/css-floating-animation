@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #fad8cd);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+    font-family: Nunito;
+}
+
+
+.floating-box{
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+    margin: 30% auto;  
+    padding: 35px 28px;
+    width: 400px;
+    opacity: .9;
+    animation: float 6s ease-in-out infinite;
+}
+
+h1{
+    margin: 0;
+
+}
+
+p{
+    font-size: 1.4rem;
+    color: gray;
+
+}
+
+span{
+    text-decoration: underline;
+    text-decoration-color: #ee7752;
+    text-decoration-thickness: 2px;
+    text-underline-position: under;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(51, 50, 50, 0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(39, 38, 38, 0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(52, 51, 51, 0.6);
+		transform: translatey(0px);
+	}
+}
